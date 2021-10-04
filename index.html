@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcule RTT</title>
+</head>
+<body>
+  <div class="calculette">
+    <h2>Calculette</h2>
+    <form action="calculeRTT">
+      <div>
+    <label for="start">Date de début</label>
+    <input type="date" name="start" id="date_start" value="2017-01-01" min="2017-01-01" max="2017-12-31">
+  </div>
+  <div>
+    <label for="end">Date de fin</label>
+    <input type="date" name="end" id="end" value="2017-12-31" min="2017-01-01" max="2017-12-31">
+  </div>
+  <div>
+    <label for="njt">Nombre de jours travaillés</label>
+    <input type="number" name="njt" max="226" min="0">
+  </div>
+  <div>
+    <label for="njp">Nombre de congés payés</label>
+    <input type="number" name="njp" max="25" min="0">
+  </div>
+    <input type="button" value="Calculer" onclick="calcule()" >
+    </form>
+    
+    <div><label for="njp">Nombre de jours ouvrés</label><p id="njo"></p></div>
+    <div><label for="njp">Nombre de jours travaillés</label><p id="njt"></p></div>
+    <div><label for="njp">Nombre de congés payés</label><p id="ncp"></p></div>
+    <div><label for="njp">Nombre de RTT</label><p id="rtt"></p></div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
